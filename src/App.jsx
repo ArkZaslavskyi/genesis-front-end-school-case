@@ -1,14 +1,17 @@
+import { Courses } from "pages/Courses";
 import { Route, Routes } from "react-router-dom";
+import GlobalStyle from "theme/Globalstyle";
 import { Layout } from "./Layout";
 
 function App() {
   return (
     <>
-      <h1>Hi, Genesis!</h1>
+      <GlobalStyle />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="courses" />
-          <Route path="courses/:courseId" />
+        <Route path="/" element={<Layout />} >
+        {/* ... path="/" element={<Layout />} */}
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:courseId" />
         </Route>
       </Routes>
     </>
