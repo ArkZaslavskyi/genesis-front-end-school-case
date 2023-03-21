@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Hls from "hls.js";
 
-export const Player = ({ link }) => {
+export const Player = ({ link, preview }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export const Player = ({ link }) => {
   
   return (
     <>
-      <video ref={videoRef} width="400" controls preload="auto" data-setup="{}" autoPlay={false} >
+      <video ref={videoRef} width="546" height="240" poster={preview} controls preload="auto" data-setup="{}" autoPlay={false} >
         {/* <source src={link} type="application/x-mpegURL"></source> */}
       </video>
     </>

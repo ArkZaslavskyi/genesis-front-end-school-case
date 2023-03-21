@@ -9,10 +9,10 @@ export const Course = ({ course }) => {
 
   return (
     <li>
-      <img src={previewImageLink + '/cover.webp'} alt="" style={{ width: "400px" }} />
+      {/* <img src={previewImageLink + '/cover.webp'} alt="" style={{ height: "400px", width: "auto" }} /> */}
       <h2>{title}</h2>
       {courseVideoPreview?.link &&
-        <Player link={courseVideoPreview.link} />}
+        <Player link={courseVideoPreview.link} preview={previewImageLink + '/cover.webp'} />}
       <p><span className={css.courseTag}>Total lessons:</span> {lessonsCount}</p>
       {meta?.skills?.length &&
         <p><span className={css.courseTag}>Skills:</span> {course.meta.skills.join(' | ')}</p>}
