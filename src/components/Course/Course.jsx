@@ -3,9 +3,7 @@ import css from "./Course.module.css";
 
 export const Course = ({ course }) => {
   const { previewImageLink, title, lessonsCount, meta, rating } = course;
-
   const { courseVideoPreview } = meta;
-  
 
   return (
     <li>

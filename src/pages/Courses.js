@@ -4,7 +4,7 @@ import { getCourses, getToken } from "services/Api";
 
 export const Courses = () => {
   const [courses, setCourses] = useState([]);
-  const [page, setPage] = useState(1);
+  // const [page, setPage] = useState(1);
 
   useEffect(() => {
     async function fetchData() {
