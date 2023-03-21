@@ -6,13 +6,12 @@ export const Player = ({ link }) => {
 
   useEffect(() => {
     if (Hls.isSupported() && videoRef) {
-      // var video = document.getElementById('video');
       var hls = new Hls();
-      // bind them together
+
       hls.loadSource(link);
-      hls.attachMedia(videoRef);
+      hls.attachMedia(videoRef.current);
+
       hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-        console.log('video and hls.js are now bound together !');
         videoRef.play();
       });
     }

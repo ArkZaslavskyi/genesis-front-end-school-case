@@ -1,5 +1,4 @@
-// import { Player } from "components/Player/Player";
-import PlayerOld from "components/PlayerOld/PlayerOld";
+import { Player } from "components/Player/Player";
 import css from "./Course.module.css";
 
 export const Course = ({ course }) => {
@@ -13,7 +12,7 @@ export const Course = ({ course }) => {
       <img src={previewImageLink + '/cover.webp'} alt="" style={{ width: "400px" }} />
       <h2>{title}</h2>
       {courseVideoPreview?.link &&
-        <PlayerOld link={courseVideoPreview.link} />}
+        <Player link={courseVideoPreview.link} />}
       <p><span className={css.courseTag}>Total lessons:</span> {lessonsCount}</p>
       {meta?.skills?.length &&
         <p><span className={css.courseTag}>Skills:</span> {course.meta.skills.join(' | ')}</p>}
