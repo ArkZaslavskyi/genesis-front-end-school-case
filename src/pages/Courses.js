@@ -15,7 +15,12 @@ export const Courses = () => {
     fetchData();
   }, []);
 
-  if (!courses.length) return;
+  if (!courses.length)
+    return (
+      <>
+        <h3>Courses data is loading...</h3>
+      </>
+    );
   return (
     <>
       <CoursesList courses={courses} />
