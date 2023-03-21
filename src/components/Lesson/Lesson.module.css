@@ -35,7 +35,8 @@
 }
 .locked:hover,
 .locked:hover .lessonTitle::after {
-    opacity: 0.3;}
+    opacity: 0.3;
+}
 
 .unlocked {
     composes: lessonTitle;

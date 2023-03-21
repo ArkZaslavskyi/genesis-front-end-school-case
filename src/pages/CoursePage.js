@@ -19,7 +19,7 @@ export const CoursePage = () => {
   if (!course)
     return (
       <>
-        <h3>Course data is loading..</h3>
+        <h3>Course data is loading...</h3>
       </>
     );
 

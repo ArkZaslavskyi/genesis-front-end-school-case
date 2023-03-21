@@ -15,7 +15,8 @@ export const Course = ({ title, description, meta, previewImageLink, lessons }) 
         (<>
           <p>Lessons list:</p>
           <ul className={css.lessonList}>
-          {lessons.map(lesson => (<Lesson key={lesson.id} {...lesson}/>))}
+          {lessons.sort((ls1, ls2) => (ls1.order - ls2.order))
+            .map(lesson => (<Lesson key={lesson.id} {...lesson} />))}
           </ul>
         </>)
       }

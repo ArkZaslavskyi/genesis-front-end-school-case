@@ -19,10 +19,9 @@ export const Lesson = ({ title, status }) => {
         <span className={css[status]} onClick={handleClick}>
         {title}{(status === 'locked') && (" - " + status)}
       </span></div>
-      {/* {!showLesson
-        ? ()
-        : ()
-      } */}
+      {showLesson &&
+        <p>Lessons data...</p>
+      }
     </li>
   );
 };
