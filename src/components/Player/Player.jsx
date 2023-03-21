@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import Hls from "hls.js";
 import css from "./Player.module.css";
 
-export const Player = ({ link, preview }) => {
+export const Player = ({ link, preview, controls }) => {
   const videoRef = useRef(null);
   
   useEffect(() => {
@@ -34,7 +34,9 @@ export const Player = ({ link, preview }) => {
         className={css.video}
         ref={videoRef}
         poster={preview}
-        controls preload="auto" data-setup="{}" autoPlay={false}
+        controls={controls}
+        preload="auto"
+        autoPlay={false}
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseleave}
       >
