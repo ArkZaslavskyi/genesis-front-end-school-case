@@ -1,3 +1,8 @@
 .courseTag {
     font-weight: 700;
 }
+
+.courseLink {
+    /* text-decoration: none; */
+    color: black;
+}

@@ -11,18 +11,18 @@ export const Lesson = ({ title, status }) => {
   }
 
   return (
-    <>
-      <p className={css.lessonList} > {!showLesson
+    <li className={css.lessonList}>
+      <div className={css.titleWrapper} > {!showLesson
           ? ("> ")
           : ("V ")
         }
         <span className={css[status]} onClick={handleClick}>
         {title}{(status === 'locked') && (" - " + status)}
-      </span></p>
+      </span></div>
       {/* {!showLesson
-        ? (<h3>{"> " + title}</h3>)
-        : (<h3>{"V " + title}</h3>)
+        ? ()
+        : ()
       } */}
-    </>
+    </li>
   );
 };

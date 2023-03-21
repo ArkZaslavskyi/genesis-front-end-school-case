@@ -1,14 +1,14 @@
 import { Player } from "components/Player/Player";
+import { NavLink } from "react-router-dom";
 import css from "./CourseCard.module.css";
 
-export const Course = ({ course }) => {
-  const { previewImageLink, title, lessonsCount, meta, rating } = course;
+export const CourseCard = ({ course }) => {
+  const { previewImageLink, title, lessonsCount, meta, rating, id } = course;
   const { courseVideoPreview } = meta;
 
   return (
     <li>
-      {/* <img src={previewImageLink + '/cover.webp'} alt="" style={{ height: "400px", width: "auto" }} /> */}
-      <h2>{title}</h2>
+      <h2><NavLink className={css.courseLink} to={`/courses/${id}`}>{title}</NavLink></h2>
       {courseVideoPreview?.link &&
         <Player link={courseVideoPreview.link} preview={previewImageLink + '/cover.webp'} controls={false} />}
       <p><span className={css.courseTag}>Total lessons:</span> {lessonsCount}</p>
