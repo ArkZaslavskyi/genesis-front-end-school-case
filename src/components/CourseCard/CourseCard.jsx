@@ -1,5 +1,5 @@
 import { Player } from "components/Player/Player";
-import css from "./Course.module.css";
+import css from "./CourseCard.module.css";
 
 export const Course = ({ course }) => {
   const { previewImageLink, title, lessonsCount, meta, rating } = course;

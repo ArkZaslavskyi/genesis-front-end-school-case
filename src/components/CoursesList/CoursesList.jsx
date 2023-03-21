@@ -1,4 +1,4 @@
-import { Course } from "components/Course/Course";
+import { Course } from "components/CourseCard/CourseCard";
 import css from "./CoursesList.module.css";
 
 export const CoursesList = ({courses}) => {
