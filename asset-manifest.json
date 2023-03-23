@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/genesis-front-end-school-case/static/css/main.7008deaa.css",
-    "main.js": "/genesis-front-end-school-case/static/js/main.53dfd51d.js",
+    "main.js": "/genesis-front-end-school-case/static/js/main.8c775998.js",
     "index.html": "/genesis-front-end-school-case/index.html",
     "main.7008deaa.css.map": "/genesis-front-end-school-case/static/css/main.7008deaa.css.map",
-    "main.53dfd51d.js.map": "/genesis-front-end-school-case/static/js/main.53dfd51d.js.map"
+    "main.8c775998.js.map": "/genesis-front-end-school-case/static/js/main.8c775998.js.map"
   },
   "entrypoints": [
     "static/css/main.7008deaa.css",
-    "static/js/main.53dfd51d.js"
+    "static/js/main.8c775998.js"
   ]
 }
