@@ -1,7 +1,8 @@
+import { Player } from "components/Player/Player";
 import { useState } from "react";
 import css from "./Lesson.module.css";
 
-export const Lesson = ({ title, status }) => {
+export const Lesson = ({ title, status, link, previewImageLink }) => {
   const [showLesson, setShowLesson] = useState(false);
 
   const handleClick = () => {
@@ -20,7 +21,12 @@ export const Lesson = ({ title, status }) => {
         {title}{(status === 'locked') && (" - " + status)}
       </span></div>
       {showLesson &&
-        <p>Lessons data...</p>
+        <Player
+          link={link}
+          preview={previewImageLink + '/cover.webp'}
+          controls={true}
+          name={title}
+        />
       }
     </li>
   );
