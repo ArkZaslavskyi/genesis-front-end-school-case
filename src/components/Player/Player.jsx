@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import Hls from "hls.js";
 import css from "./Player.module.css";
 
-export const Player = ({ link, preview, controls, name = "" }) => {
+export const Player = ({ link, preview, controls, name = null }) => {
   const videoRef = useRef(null);
   const interval = useRef(null);
 
@@ -34,7 +34,7 @@ export const Player = ({ link, preview, controls, name = "" }) => {
 
     interval.current = setInterval(() => {
       // console.log(videoRef.current.currentTime);
-      localStorage.setItem(name, videoRef.current.currentTime);
+      if (name) localStorage.setItem(name, videoRef.current.currentTime);
     }, 1000) 
   }
   
