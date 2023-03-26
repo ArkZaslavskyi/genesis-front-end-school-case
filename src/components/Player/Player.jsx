@@ -15,6 +15,7 @@ export const Player = ({ link, preview, controls, name = null }) => {
 
       hls.on(Hls.Events.MEDIA_ATTACHED, function () {
         videoRef.current.currentTime = localStorage.getItem(name) ?? 0;
+        // 
         videoRef.play();
       });
     }

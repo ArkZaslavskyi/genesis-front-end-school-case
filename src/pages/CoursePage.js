@@ -16,17 +16,12 @@ export const CoursePage = () => {
     fetchData();
   }, [courseId]);
 
-  if (!course)
-    return (
-      <>
-        <h3>Course data is loading...</h3>
-      </>
-    );
-
-  console.log(course);
+  //
+  if (course) console.log(course);
+  //
   return (
-    <>
-      <Course {...course} />
-    </>
+    <div className="Container">
+      {!course ? <h3>Course data is loading...</h3> : <Course {...course} />}
+    </div>
   );
 };

@@ -32,6 +32,24 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  .Container {
+    width: 480px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    .Container {
+      width: 768px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .Container {
+      width: 1280px;
+    }
+  }
 `;
 
 export default GlobalStyle;

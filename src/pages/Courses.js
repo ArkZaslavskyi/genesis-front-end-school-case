@@ -1,6 +1,7 @@
 import { CoursesList } from "components/CoursesList/CoursesList";
 import { useEffect, useState } from "react";
 import { getCourses, getToken } from "services/Api";
+// import css from "theme/Globalstyle";
 
 export const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -15,15 +16,13 @@ export const Courses = () => {
     fetchData();
   }, []);
 
-  if (!courses.length)
-    return (
-      <>
-        <h3>Courses data is loading...</h3>
-      </>
-    );
   return (
-    <>
-      <CoursesList courses={courses} />
-    </>
+    <div className="Container">
+      {!courses.length ? (
+        <h3>Courses data is loading...</h3>
+      ) : (
+        <CoursesList courses={courses} />
+      )}
+    </div>
   );
 };

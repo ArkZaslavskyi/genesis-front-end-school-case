@@ -7,7 +7,7 @@ export const CourseCard = ({ course }) => {
   const { courseVideoPreview } = meta;
 
   return (
-    <li>
+    <li className={css.courseCard}>
       <h2><NavLink className={css.courseLink} to={`/courses/${id}`}>{title}</NavLink></h2>
       {courseVideoPreview?.link &&
         <Player link={courseVideoPreview.link} preview={previewImageLink + '/cover.webp'} controls={false} />}
@@ -15,7 +15,6 @@ export const CourseCard = ({ course }) => {
       {meta?.skills?.length &&
         <p><span className={css.courseTag}>Skills:</span> {course.meta.skills.join(' | ')}</p>}
       <p><span className={css.courseTag}>Rating:</span> { rating }</p>
-      
     </li>
   )
 };
