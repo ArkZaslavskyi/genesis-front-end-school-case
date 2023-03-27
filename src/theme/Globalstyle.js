@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
   }
 
+  .section {
+    padding: 8px 0;
+  }
+
   @media screen and (min-width: 768px) {
     .Container {
       width: 768px;
