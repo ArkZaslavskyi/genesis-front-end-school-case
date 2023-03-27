@@ -30,16 +30,15 @@ export const Player = ({ link, preview, controls, name = null }) => {
     e.target.muted = false;
   }
 
-  const handleVideoPlaying = (e) => {
+  const handleVideoPlaying = () => {
     // console.log('video is playing...' )
 
     interval.current = setInterval(() => {
-      // console.log(videoRef.current.currentTime);
       if (name) localStorage.setItem(name, videoRef.current.currentTime);
     }, 1000) 
   }
   
-  const handleVideoPause = (e) => {
+  const handleVideoPause = () => {
     // console.log('video is pausing...')
 
     clearInterval(interval.current)

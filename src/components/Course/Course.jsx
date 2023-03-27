@@ -1,16 +1,18 @@
 import { Lesson } from "components/Lesson/Lesson";
 import { Player } from "components/Player/Player";
-import { NavLink } from "react-router-dom";
 import css from "./Course.module.css";
 
 export const Course = ({ title, description, meta, previewImageLink, lessons }) => {
   const { courseVideoPreview } = meta;
+
   return (
     <>
-      <h3>{title}</h3>
+      <h3 className={css.courseTitle}>{title}</h3>
       <p>{description}</p>
       {courseVideoPreview?.link &&
-        <Player link={courseVideoPreview.link} preview={previewImageLink + '/cover.webp'} controls={true} />}
+        (<div className={css.playerWrapper}>
+          <Player link={courseVideoPreview.link} preview={previewImageLink + '/cover.webp'} controls={true} />
+        </div>)}
       {lessons?.length &&
         (<>
           <p>Lessons list:</p>

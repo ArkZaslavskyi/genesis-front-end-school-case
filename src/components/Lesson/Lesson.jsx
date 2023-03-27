@@ -21,12 +21,14 @@ export const Lesson = ({ title, status, link, previewImageLink }) => {
         {title}{(status === 'locked') && (" - " + status)}
       </span></div>
       {showLesson &&
-        <Player
-          link={link}
-          preview={previewImageLink + '/cover.webp'}
-          controls={true}
-          name={title}
-        />
+        <div className={css.playerWrapper}>
+          <Player
+            link={link}
+            preview={previewImageLink + '/cover.webp'}
+            controls={true}
+            name={title}
+          />
+        </div>
       }
     </li>
   );

@@ -7,11 +7,20 @@
 .pgNum {
     cursor: pointer;
     padding: 2px;
+    color: black;
+    transition: all 0.5s;
+}
+
+.pgNum:hover {
+    color: var(--color-active);
 }
 
 .pgNumCurrent {
     composes: pgNum;
     font-weight: 700;
     border-bottom: 2px solid black;
+}
 
+.pgNumCurrent:hover {
+    border-bottom-color: var(--color-active);
 }

@@ -1,9 +1,11 @@
+.titleWrapper {
+}
 .lessonList {
     font-weight: 500;
 }
 
 .lessonList:not(:first-of-type) {
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 .lessonTitle {
@@ -11,6 +13,7 @@
     display: inline-block;
     cursor: pointer;
     font-weight: 500;
+    transition: all 0.5s;
 }
 
 .lessonTitle::after {
@@ -21,11 +24,19 @@
     width: 100%;
     height: 1px;
     background: black;
+    opacity: 1;
+    transition: all 0.5s;
 }
 
 .lessonTitle:hover,
 .lessonTitle:hover .lessonTitle::after {
+    color: var(--color-active);
     opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.lessonTitle:hover::after {
+    background: var(--color-active);
 }
 
 .locked {
@@ -41,4 +52,8 @@
 .unlocked {
     composes: lessonTitle;
     opacity: 1;
+}
+
+.playerWrapper {
+    margin: 8px 0;
 }

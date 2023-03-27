@@ -8,7 +8,7 @@ export const CourseCard = ({ course }) => {
 
   return (
     <li className={css.courseCard}>
-      <h2 className={css.noMargin}><NavLink className={css.courseLink} to={`/courses/${id}`}>{title}</NavLink></h2>
+      <h2 className={css.cardTitle}><NavLink className={css.courseLink} to={`/courses/${id}`}>{title}</NavLink></h2>
       <div className={css.playerWrapper}>
         {courseVideoPreview?.link &&
           <Player link={courseVideoPreview.link} preview={previewImageLink + '/cover.webp'} controls={false} />}

@@ -1,3 +1,9 @@
+.courseTitle {
+    color: #5a5a5a;
+}
 .lessonList {
-    margin-top: 12px;
+    margin-top: 16px;
+}
+.playerWrapper{
+    padding: 8px 0;
 }
