@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --color-active: #e99d35;
+    --color-gray: #5a5a5a;
   }
   body {
     margin: 0;

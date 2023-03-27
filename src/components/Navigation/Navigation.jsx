@@ -1,11 +1,11 @@
-import { Link } from "./Navigation.styled";
+import { Nav, Link } from "./Navigation.styled";
 
 export const Navigation = () => {
   return (
-    <nav>
+    <Nav>
       <Link to="courses" end>
         Courses
       </Link>
-    </nav>
+    </Nav>
   )
 };

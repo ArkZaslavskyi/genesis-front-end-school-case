@@ -17,7 +17,8 @@ export const Link = styled(NavLink)`
     position: absolute;
     width: 100%;
     height: 1px;
-    background: black;
+    /* background: black; */
+    opacity: 0;
     transition: all 0.5s;
   }
 
@@ -26,6 +27,15 @@ export const Link = styled(NavLink)`
 
     &::after {
       background: var(--color-active);
+      opacity: 1;
     }
   }
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  padding: 8px;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
 `;
