@@ -1,8 +1,7 @@
 .video {
-    /* width: 426px;
-    height: 240px; */
-    width: calc(100%);
-    height: calc(100% * 240 / 426);
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.77;
     object-fit: cover;
 }
 
