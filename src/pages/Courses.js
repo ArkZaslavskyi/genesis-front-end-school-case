@@ -41,6 +41,9 @@ export const Courses = () => {
       ) : (
         <>
           <section className="section">
+            <Pagination {...{ currentPage, setCurrentPage, totalPages }} />
+          </section>
+          <section className="section">
             <CoursesList courses={currentPageCourses} />
           </section>
           <section className="section">
