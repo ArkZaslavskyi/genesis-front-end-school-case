@@ -5,7 +5,10 @@
 ## API
 
 https://www.postman.com/aninix/workspace/genesis-front-end-school/overview,  
-перед початком роботи форкнуто у свій акаунт postman.
+перед початком роботи форкнуто у свій акаунт postman.  
+
+Щоб завантаження даних з API працювало, необхідно встановити розштрення у браузері:  
+Allow CORS: 'Access-Control-Allow-origin'
 
 ## Опис
 
